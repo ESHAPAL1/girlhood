@@ -3,9 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>heyyyyyyyy</title>
+    <title>Girlhood: It's Complicated</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
 <body>
-    <h1>Hello World</h1>
+    <!-- Hero Section with Background Image -->
+    <header id="home" class="hero">
+        <!-- Placeholder image tag -->
+        <img src="./images/Untitled-Camera.png" alt="Hero Background" class="hero-bg">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Girlhood: It's Complicated</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#items">Collections</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Exploring Girlhood Through Clothing</h1>
+            <p>A journey into the complex symbolism, identity, and societal expectations.</p>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="about" class="intro">
+        <div class="container">
+            <h2>Welcome to Girlhood</h2>
+            <p>Dive into the nuanced journey of girlhood, where clothing becomes a symbol of societal expectations, individuality, and evolution. Discover how history and culture shape the garments that define identity.</p>
+        </div>
+    </section>
+
+    <!-- Accordion Section -->
+    <section id="items" class="accordion">
+        <h2>Our Collection</h2>
+    
+        <!-- Accordion Item 1 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Apron</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="accordion-content">
+                <p>Stylish, durable, and designed for comfort—our aprons bring elegance to your kitchen adventures. Perfect for cooking, baking, or crafting, with adjustable straps and roomy pockets.</p>
+                <div class="gallery">
+                    <img src="./images/Apron.png" alt="Apron Front">
+                    <img src="./images/Back apron-Camera.png" alt="Apron Back">
+                    <img src="./images/side apron-Camera.png" alt="Apron Side">
+                </div>
+                <div class="model-viewer-container">
+                    <model-viewer src="./models/apron-model.glb" alt="3D Model of Apron" camera-controls autoplay></model-viewer>
+                    <div class="placeholder-overlay">
+                        <p>3D Model Coming Soon...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Accordion Item 2 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Gym Suit</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="accordion-content">
+                <p>Stay cool, move freely, and look sharp with our sleek gym suit. Lightweight, breathable, and designed for performance—perfect for workouts or casual wear.</p>
+                <div class="gallery">
+                    <img src="./images/Gym-Camera.png" alt="Gym Suit Front">
+                    <img src="./images/Back-Gym-Camera.png" alt="Gym Suit Back">
+                    <img src="./images/side-Gym-Camera.png" alt="Gym Suit Side">
+                </div>
+                <div class="model-viewer-container">
+                    <model-viewer src="./models/gym-suit-model.glb" alt="3D Model of Gym Suit" camera-controls autoplay></model-viewer>
+                    <div class="placeholder-overlay">
+                        <p>3D Model Coming Soon...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Accordion Item 3 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Jacket</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="accordion-content">
+                <p>Experience comfort and style with our versatile jacket—crafted for warmth, designed for impact. Perfect for any season, it blends functionality with a sleek, timeless look.</p>
+                <div class="gallery">
+                    <img src="./images/Selena.png" alt="Jacket Front">
+                    <img src="./images/back-Camera.png" alt="Jacket Back">
+                    <img src="./images/side selena.png" alt="Jacket Side">
+                </div>
+                <div class="model-viewer-container">
+                    <model-viewer src="./models/jacket-model.glb" alt="3D Model of Jacket" camera-controls autoplay></model-viewer>
+                    <div class="placeholder-overlay">
+                        <p>3D Model Coming Soon...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>Girlhood: It's Complicated</h3>
+            <p>Exploring the essence of girlhood through time and clothing.</p>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#items">Collections</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2024 Girlhood: It's Complicated. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion Toggle Script
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            const icon = header.querySelector('.toggle-icon');
+
+            header.addEventListener('click', () => {
+                const isOpen = content.style.maxHeight;
+                if (isOpen) {
+                    content.style.maxHeight = null;
+                    icon.textContent = '+';
+                } else {
+                    accordionItems.forEach(i => {
+                        const contentToClose = i.querySelector('.accordion-content');
+                        const iconToReset = i.querySelector('.toggle-icon');
+                        contentToClose.style.maxHeight = null;
+                        iconToReset.textContent = '+';
+                    });
+
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

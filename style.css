@@ -1,0 +1,294 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  background-color: #f9f4ef;
+  color: #3e2723;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+  font-size: 1.8rem;
+  font-family: 'Garamond', serif;
+  color: #3e2723;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  color: #3e2723;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Hero Background Image */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fully covers the section */
+  z-index: -1; /* Places the image behind the content */
+}
+
+/* Hero Content */
+.hero-content h1 {
+  font-size: 3rem;
+  font-family: 'Garamond', serif;
+  margin-bottom: 1rem;
+  z-index: 1; /* Ensures the text appears above the background */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  font-style: italic;
+  z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 0;
+  z-index: 2; /* Ensures the navbar appears above the background */
+  background: rgba(0, 0, 0, 0.5); /* Optional: Adds semi-transparent background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+  font-size: 1.8rem;
+  font-family: 'Garamond', serif;
+  color: #f8f3e8;
+  margin: 0;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #f8f3e8;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #d8c3a5;
+}
+
+/* Gallery Section */
+.gallery-section {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f3e8;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.gallery-images img,
+.gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover,
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.accordion {
+  margin: 2rem auto;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordion h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #3e2723;
+  font-family: 'Garamond', serif;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  background: #f8f3e8;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: #e8dfd0;
+}
+
+.accordion-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-family: 'Garamond', serif;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 1rem;
+}
+
+.accordion-content p {
+  margin: 1rem 0;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #3e2723, #8e8d8a);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: 'Garamond', serif;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #f8f3e8;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #d8c3a5;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #f8f3e8;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d8c3a5;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #bdbdbd;
+  font-style: italic;
+}
+
+/* 3D Model Viewer Styling */
+.model-viewer-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+model-viewer {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+
